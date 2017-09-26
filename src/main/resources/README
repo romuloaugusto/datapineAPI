@@ -1,10 +1,12 @@
-Bonus
-● Add a new data series in the statistics chart with a linear trend line
+Some comments:
 
-Not done.
+● Maven is used in this project.
+● There is a 4 tests that use Mock, Junit and Spring. These tests can be run with maven with command mvn test.
 
-● Add a new data series with the simple moving average, where mavgPoints is the input parameter to the statistics API
+Bonus questions
+● Add a new data series in the statistics chart with a linear trend line: Not done.
 
+● Add a new data series with the simple moving average, where mavgPoints is the input parameter to the statistics API: Done
 I added a serie call averageInvalidRequest to show avarage of invalid request. Considering the invalid request is one request that doesn't have a dimension or measure.
 
 Look at the following example:
