@@ -1,0 +1,53 @@
+Bonus
+● Add a new data series in the statistics chart with a linear trend line
+
+Not done.
+
+● Add a new data series with the simple moving average, where mavgPoints is the input parameter to the statistics API
+
+I added a serie call averageInvalidRequest to show avarage of invalid request. Considering the invalid request is one request that doesn't have a dimension or measure.
+
+Look at the following example:
+
+Request:
+{ "last": 10, "timeUnit": "seconds", "mavgPoints": 2 }
+
+Response:
+{
+    "totalRequests": 11,
+    "totalQueries": 27,
+    "chart": {
+        "categories": [
+            "2017-09-26 00:02:44",
+            "2017-09-26 00:02:45",
+            "2017-09-26 00:02:46",
+            "2017-09-26 00:02:47",
+            "2017-09-26 00:02:48",
+            "2017-09-26 00:02:49",
+            "2017-09-26 00:02:50",
+            "2017-09-26 00:02:51",
+            "2017-09-26 00:02:52",
+            "2017-09-26 00:02:53"
+        ],
+        "series": [
+            {
+                "name": "requests",
+                "data": [
+                    0, 3, 4, 2, 0, 0, 1, 1, 0, 0
+                ]
+            },
+            {
+                "name": "queries",
+                "data": [
+                    0, 9, 12, 6, 0, 0, 0, 0, 0, 0
+                ]
+            },
+            {
+                "name": "averageInvalidRequest",
+                "data": [
+                    0, 0, 0, 0, 0, 0, 0.5, 0.5, 0, 0
+                ]
+            }
+        ]
+    }
+}
